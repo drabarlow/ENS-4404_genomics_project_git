@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>How to Design a Conservation Genomics Project</title>
+  <meta charset="utf-8">
+  <meta name="description" content="How to Design a Conservation Genomics Project">
+  <meta name="author" content="Dr Axel Barlow">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/zenburn.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/custom.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+    
+  <slide class="nobackground">
+    <article class="flexbox vcenter">
+      <span>
+        <img width='300px' src="assets/img/A1_FullColour.svg">
+      </span>
+    </article>
+  </slide>
+    <slide class="title-slide segue nobackground">
+  
+  <aside class="gdbar">
+    <img src="assets/img/LA_Full_colour_reversed.svg">
+  </aside>
+  
+  <hgroup class="auto-fadein">
+    <h1>How to Design a Conservation Genomics Project</h1>
+    <h2>ENS-4404 Genetics and the Conservation of Small Populations</h2>
+    <p>Dr Axel Barlow<br/>email: a.barlow.@bangor.ac.uk</p>
+  </hgroup>
+  
+  <article></article>  
+      
+  <footer class = 'license'>
+    <a href='http://creativecommons.org/licenses/by-nc-sa/3.0/'>
+    <img width = '80px' src = 'http://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png'>
+    </a>
+  </footer>
+  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  
+  <article data-timings="">
+    <!-- adding bold and italic options -->
+
+<style>
+em {
+  font-style: italic
+}
+strong {
+  font-weight: bold;
+}
+</style>
+
+<h2>Conservation Genomics Research</h2>
+
+<p><img src="./assets/img/Bangor_rep_con.png" width="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  
+  <hgroup>
+    <h2>How to design a genomics project</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><strong>Planning</strong></p>
+
+<ul>
+<li>What is the question?</li>
+<li>What data and coverage?</li>
+<li>Is there a reference genome?</li>
+</ul>
+
+<p><strong>Running the project</strong></p>
+
+<ul>
+<li>Getting samples</li>
+<li>DNA extraction</li>
+<li>Library preparation and sequencing</li>
+<li>Data analysis and storage</li>
+</ul>
+
+<p><strong>Funding</strong></p>
+
+<ul>
+<li>What does it all cost?</li>
+<li>Finding funders</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-3" style="background:;">
+  
+  <hgroup>
+    <h2>Planning</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  
+  <hgroup>
+    <h2>What is the question?</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Measure genetic variability</strong></p>
+
+<ul>
+<li>Individual heterozygosity or inbreeding</li>
+<li>Population level</li>
+<li>Single or multiple populations?</li>
+</ul>
+
+<p><strong>Identify population structure</strong></p>
+
+<ul>
+<li>Do you know where the populations are?</li>
+<li>What is the geographic scale?</li>
+<li>Need multiple individuals per pop</li>
+</ul>
+
+<p><strong>Test for selection</strong></p>
+
+<ul>
+<li>Based on population allele frequencies</li>
+<li>&gt;15 individuals per pop</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="./assets/img/map_eg.png" width="65%" style="display: block; margin: auto;" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  
+  <hgroup>
+    <h2>What data and coverage?</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Genome resequencing</strong></p>
+
+<ul>
+<li>You can do everything (except structural variants)</li>
+<li>Individual-based analyses typically require higher coverage</li>
+<li>Can use <strong>genotype likelihoods</strong></li>
+<li>Measures within or between populations (inc. phylogeny) can use lower coverage</li>
+<li>Highly recyclable and reusable</li>
+<li>Most expensive</li>
+<li>Least lab work</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="./assets/img/resequencing.svg" width="75%" style="display: block; margin: auto;" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  
+  <hgroup>
+    <h2>What data and coverage?</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>SNP arrays</strong></p>
+
+<ul>
+<li>Question depends where the SNPs are</li>
+<li>Can&#39;t recover contiguous sequences </li>
+<li>Can&#39;t discover new variants</li>
+<li>Can suffer from <strong>ascertainment bias</strong></li>
+<li>Development expensive but then cheap and scaleable</li>
+<li>Can&#39;t really be integrated with other data types</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="./assets/img/hires-beadchip-12-fan.jpg" width="100%" style="display: block; margin: auto;" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  
+  <hgroup>
+    <h2>What data and coverage?</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>RADseq</strong></p>
+
+<ul>
+<li>No functional analysis</li>
+<li>No inbreeding using ROH</li>
+<li>Phylogenetics tricky</li>
+<li>Cheap sequencing costs but more lab work</li>
+<li>Poor reproducibility</li>
+<li>Can&#39;t really be integrated with other data types</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="./assets/img/RADseq_schematic.svg" width="100%" style="display: block; margin: auto;" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  
+  <hgroup>
+    <h2>Is there a reference genome?</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Yes, fully annotated chromosome level</strong></p>
+
+<ul>
+<li>You can do everything</li>
+</ul>
+
+<p><strong>Yes, but no annotation</strong></p>
+
+<ul>
+<li>No functional analysis possible</li>
+</ul>
+
+<p><strong>Yes, but scaffold level</strong></p>
+
+<ul>
+<li>Sex-specific processes and inbreeding using ROHs difficult</li>
+</ul>
+
+<p><strong>No reference genome</strong></p>
+
+<ul>
+<li>Only RADseq</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="./assets/img/assembly.svg" width="75%" style="display: block; margin: auto;" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-9" style="background:;">
+  
+  <hgroup>
+    <h2>Running the project</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  
+  <hgroup>
+    <h2>Getting samples</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>Requires a tissue sample</li>
+<li>Swab, skin, hair</li>
+<li>Blood, soft tissue</li>
+<li>Live or dead?</li>
+<li>UK - Home Office Licensable?</li>
+<li>Landowner permission?</li>
+<li>How to find/catch?</li>
+<li>Ethical concerns?</li>
+<li>Tissue export (CITES, Nagoya)</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="./assets/img/meadow.png" width="85%" style="display: block; margin: auto;" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  
+  <hgroup>
+    <h2>DNA extraction, library preparation and sequencing</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>DNA extraction</strong></p>
+
+<ul>
+<li>Mostly use commercial kits</li>
+<li>With modification for tissue type</li>
+<li>Minimal lab equipment</li>
+<li>Easy!</li>
+</ul>
+
+<p><strong>Library prep</strong></p>
+
+<ul>
+<li>Easy to outsource</li>
+<li>Running in house a bit cheaper</li>
+<li>Requires large investment/additional kit</li>
+</ul>
+
+<p><strong>Sequencing</strong></p>
+
+<ul>
+<li>Most labs will outsource</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="./assets/img/DSC_0060a.jpg" width="100%" style="display: block; margin: auto;" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  
+  <hgroup>
+    <h2>Data analysis and storage</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>Raw data volume 10x snake:</li>
+<li>Project volume hedgehogs: 4.3 Tb</li>
+<li>Typical mapping run: 20 CPUs, 192 Gb RAM, 3-4 hrs</li>
+<li>HPC running linux OS</li>
+<li>Windows unsupported</li>
+<li>HPC may incur charges</li>
+<li>Hard disk space will be Tb, duplicate backup</li>
+<li>All raw data ends up on public database</li>
+<li>Code published alongside paper</li>
+<li>Requires academic at PhD/postdoc level</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="./assets/img/Screenshot from 2025-02-20 14-02-36.png" width="100%" style="display: block; margin: auto;" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-13" style="background:;">
+  
+  <hgroup>
+    <h2>Funding</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-14" style="background:white;">
+  
+  <hgroup>
+    <h2>What does it all cost?</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><strong>Lab consumables</strong></p>
+
+<ul>
+<li>Negligible, few £100&#39;s</li>
+</ul>
+
+<p><strong>Reference genome</strong></p>
+
+<ul>
+<li>Minimally 20x coverage PacBio</li>
+<li>1.5 Gb genome = £3k</li>
+</ul>
+
+<p><strong>Resequencing</strong></p>
+
+<ul>
+<li>Genome * coverage * £9 = total</li>
+<li>1.6 * 10 * 9 = £144</li>
+<li>24 * 10 * 9 = £2040</li>
+</ul>
+
+<p><strong>Staffing</strong></p>
+
+<ul>
+<li>Postdoc = £60k per annum</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="./assets/img/cost.png" width="100%" style="display: block; margin: auto;" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  
+  <hgroup>
+    <h2>Finding funders</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>Research councils</li>
+<li>Governmental departments</li>
+<li>Conservation NGOs</li>
+<li>Commercial companies</li>
+<li>Students!</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="./assets/img/funding.jpg" width="100%" style="display: block; margin: auto;" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="thank-you-slide segue nobackground" id="slide-16">
+  <aside class="gdbar right"><img src="assets/img/LA_Full_colour_reversed.svg"></aside>
+  <article class="flexbox vleft auto-fadein">
+    <h2>Next time:</h2>
+    <p>Ancient DNA II: museum samples</p>
+
+  </article>
+
+  <p class="auto-fadein" data-config-contact="">
+    
+  </p>
+</slide>
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='NA'>
+         1
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='How to design a genomics project'>
+         2
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Planning'>
+         3
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='What is the question?'>
+         4
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='What data and coverage?'>
+         5
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='What data and coverage?'>
+         6
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='What data and coverage?'>
+         7
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Is there a reference genome?'>
+         8
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Running the project'>
+         9
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Getting samples'>
+         10
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='DNA extraction, library preparation and sequencing'>
+         11
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Data analysis and storage'>
+         12
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Funding'>
+         13
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='What does it all cost?'>
+         14
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Finding funders'>
+         15
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Next time:'>
+         16
+      </a>
+    </li>
+    
+    </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
